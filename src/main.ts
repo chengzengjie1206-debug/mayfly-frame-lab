@@ -24,6 +24,8 @@ import { buildSheet, downloadBlob, framesZipBlob, sheetBlob } from './lib/export
 type ViewMode = 'home' | 'console' | 'support';
 
 const GITHUB_REPO_URL = 'https://github.com/chengzengjie1206-debug/mayfly-frame-lab';
+const LOGO_URL = `${import.meta.env.BASE_URL}niuma.png`;
+const QR_CODE_URL = `${import.meta.env.BASE_URL}zhifu.jpg`;
 
 type AppState = {
   videoUrl: string | null;
@@ -97,7 +99,7 @@ app.innerHTML = `
     <header class="global-header">
       <div class="header-inner">
         <button class="brand-button" data-switch-view="home" type="button">
-          <img class="brand-logo" src="/niuma.png" alt="Mayfly 图标" />
+          <img class="brand-logo" src="${LOGO_URL}" alt="Mayfly 图标" />
           <span class="brand-text">
             <strong>mayfly工具站</strong>
             <small>视频转游戏序列帧</small>
@@ -236,7 +238,7 @@ app.innerHTML = `
             <span class="section-kicker">为更新助力</span>
             <h2>支持作者</h2>
             <p>如果你觉得这个工具对你有帮助，并且愿意为后续更新助力，可以扫描下方二维码。</p>
-            <img src="/zhifu.jpg" alt="Mayfly 支付二维码" class="support-card__image" />
+            <img src="${QR_CODE_URL}" alt="Mayfly 支付二维码" class="support-card__image" />
             <div class="support-caption">支付宝收款码</div>
           </aside>
         </div>
